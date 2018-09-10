@@ -1,0 +1,7 @@
+2018.9.10  
+  
+动态调整参数，dynamic_reconfigure  关于回调函数的绑定  boost::bind(&class_name::Callback,this,_1_2);
+当动态参数调整回调函数作为类成员时，第一个参数：绑定函数指针需要加类名（即便是在类的内部，也是需要加类名的），
+第二个参数：绑定类指针（在类内部时，用this），如果绑定的是普通回调函数，则不需要绑定类指针，不使用此参数。
+第三、四个参数为占位符。关于boos绑定函数 https://blog.csdn.net/fan_sean/article/details/12844673
+ 
